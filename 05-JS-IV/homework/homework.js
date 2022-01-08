@@ -79,7 +79,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-return arguments[1] in objeto;
+return propiedad in objeto;
 }
 
 function verificarPassword(usuario, password) {
