@@ -47,6 +47,10 @@ function agregarStringInvertida() {
   }
   String.prototype.reverse = reverse;
 }
+// Easier method: 
+// String.prototype.reverse = function () {
+// return this.split('').reverse.join('')
+// }
 
 // ---------------------------------------------------------------------------//
 //Crea el constructor de la clase "Persona"
@@ -66,10 +70,10 @@ class Persona {
     this.domicilio = domicilio;
   }
   detalle() {
-    return {nombre: this.nombre,
-            apellido: this.apellido,
-            edad: this.edad,
-            domicilio: this.domicilio
+    return {nombre: nombre,
+            apellido: apellido,
+            edad: edad,
+            domicilio: domicilio
           }
   }
 }
@@ -78,20 +82,17 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
- var fap = new Persona(nombre, apellido, edad, dir);
- return fap
+return new Persona(nombre, apellido, edad, dir);
 }
 
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
-  function datos() {
-    var nombre = this.nombre;
-    var edad = this.edad;
-    return '' + this.nombre + ', ' + this.edad + ' años'
-  }
-  Persona.prototype.datos = datos;
+Persona.prototype.datos = function () {
+  return this.nombre + ', ' + this. edad + ' años'
 }
+}
+
 
 
 // No modificar nada debajo de esta línea
