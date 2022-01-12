@@ -1,0 +1,8 @@
+#titulo {color: blue;}
+.FirstDiv {color: green; text-align: center;}
+.SecondDiv {text-align: center;}
+.ThirdDiv {background-clip: border-box;}
+.Pizzas {margin-bottom: 5px;}
+#FirstPizza {margin-bottom: 5px;}
+img {width: 45%; margin-bottom: 10px;}
+.PizzaList {border: double; background: green}
